@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RouterOutputs } from "../utils/api";
 import ReactMarkdown from "react-markdown";
 
-type Note = RouterOutputs["note"]["getAll"][0];
+type Note = RouterOutputs["note"]["getAll"][0]
 
 export const NoteCard = ({
   note,
