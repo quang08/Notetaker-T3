@@ -1,32 +1,67 @@
-# Create T3 App
+Full-stack notetaker app built with [T3 Stack](https://create.t3.gg/). Customize your topic and write your notes with built in Markdown editor!
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Database**: [Supabase](https://supabase.com/)
+- **Type-safety**: [tRPC](https://trpc.io/)
+- **ORM**: [Prisma](https://prisma.io/)
+- **Authentication**: [NextAuth (AuthJS)](https://next-auth.js.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Styling**: [DaisyUI](https://daisyui.com/)
 
-# Getting an OAuth Client ID
+# Home signed out
+<img width="1349" alt="Home1" src="https://user-images.githubusercontent.com/84165564/232741531-69443502-e638-4a5f-8aaa-f2521f3ef265.png">
 
-Here is how you get and [OAuth Client ID](https://scribehow.com/shared/Github_Workflow_to_create_OAuth_tokens__O_H4oeqRQzaubnFP_99aKg)
+# Home signed in with GitHub
+<img width="1349" alt="Home2" src="https://user-images.githubusercontent.com/84165564/232741524-194159da-41fd-49b4-a9eb-96da3e5f4fb9.png">
 
-## What's next? How do I make an app with this?
+# Markdown editor
+<img width="1349" alt="Markdown1" src="https://user-images.githubusercontent.com/84165564/232741517-91b04f0d-7bd2-481e-b364-fd1b527677eb.png">
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+<img width="1349" alt="Markdown2" src="https://user-images.githubusercontent.com/84165564/232741507-38e0d23e-4484-4961-8bf1-f6453da1a90e.png">
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+<img width="1349" alt="Markdown3" src="https://user-images.githubusercontent.com/84165564/232741480-9e325094-6afb-43b6-b8ca-3931f3ddda7e.png">
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+To run this project, you will need to add the following environment variables to your `.env` file
 
-## Learn More
+```bash
+# Database URL for Prisma
+DATABASE_URL=
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+# Clerk for auth
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Run Locally
 
-## How do I deploy this?
+Clone the project
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+```bash
+  git clone https://github.com/quang08/Notetaker-T3.git
+```
+
+Go to the project directory
+
+```bash
+  cd Notetaker-T3
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Apply migrations to database
+
+```bash
+  npx prisma db push
+```
+
+
+Start the server
+
+```bash
+  npm run dev
+```
